@@ -53,7 +53,7 @@
             label = "SYM";
 
             bindings = <
-                               &none          &none          &none            &none          &none          &none          &none          &none
+                               &kp LBRC          &kp RBRC          &kp LPAR           &kp RPAR          &none          &none          &none          &none
                 &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &none          &none          &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
                                &kp GRAVE      &kp DQT        &kp UNDERSCORE                                 &kp BACKSLASH  &kp PIPE       &kp EQUAL
                                                              &kp TILDE        &trans         &trans         &trans
