@@ -64,9 +64,9 @@
             label = "FUN";
 
             bindings = <
-                               &bootloader    &trans         &bt BT_CLR_ALL &bt BT_PRV     &kp F12        &kp F7         &kp F8         &kp F9
-                &kp LC(LG(Q))    &kp F12        &kp F11        &kp F10        &bt BT_NXT     &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
-                               &kp F9         &kp F8         &kp F7                                       &kp F1         &kp F2         &kp F3
+                               &kp SQT    &kp SEMICOLON        &&kp LEFT_BRACKET &bt BT_PRV     &kp RIGHT_BRACKET         &kp F7         &kp F8         &kp F9
+                &kp LC(LG(Q))    &kp F12        &kp F11        &kp F10        &kp BACKSLASH     &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
+                               &bt BT_CLR_ALL         &bt BT_PRV        &bt BT_NXT                                       &kp F1         &kp F2         &kp F3
                                                              &out OUT_TOG   &trans         &trans         &trans
             >;
 #endif
