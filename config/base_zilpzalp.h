@@ -43,8 +43,8 @@ combo_##NAME { \
         compatible = "zmk,combos";
 /* usually on base layer */
         COMBO(q, &kp Q, 1 2)
-        COMBO(z, &kp Z, 18 19)
-        COMBO(v, &kp V, 0 1)
+        COMBO(z, &kp Y, 4 5)
+        COMBO(v, &kp Q, 0 1)
         COMBO(_ae, &kp RA(A), 15 26)
         COMBO(_oe, &kp RA(O), 17 26)
         COMBO(_ue, &kp RA(U), 6 26)
@@ -64,9 +64,6 @@ combo_##NAME { \
         COMBO(rpar, &kp RPAR, 5 14)
         COMBO(rbkt, &kp RBKT, 6 15)
         COMBO(rbrc, &kp RBRC, 7 16)
-/* caps */
-        COMBO(caps, &caps_word, 11 14)
-        COMBO(capslock, &kp CAPSLOCK, 0 7)
 /* deletion */
         COMBO(bspc, &kp BSPC, 5 6)
         COMBO(del, &kp DEL, 6 7)
