@@ -34,7 +34,7 @@
 
             bindings = <
                                   &kp TAB            &none                &none              &none          &none          &kp N7         &kp N8         &kp N9
-                &hl LCTRL KP_PLUS &hl LALT KP_MINUS &hl LGUI KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT       &none          &kp N4         &kp N5         &kp N6         &DOT
+                &hl LCTRL KP_PLUS &hl LALT KP_MINUS &hl LGUI KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT       &none          &kp N4         &kp N5         &kp N6         &none
                                   &kp N9            &kp N8               &kp N7                                           &kp N1         &kp N2         &kp N3
                                                              &trans         &trans         &kp E          &kp N0
             >;
@@ -43,7 +43,7 @@
             label = "NAV";
 
             bindings = <
-                               &kp LA(LC(LG(M)))          &none      &none         &kp C_VOL_DN   &kp C_VOL_UP     &kp C_PLAY_PAUSE  &kp LESS_THAN &kp GREATER_THAN
+                               &kp LA(LC(LG(M)))          &none           &none         &kp C_VOL_DN   &kp C_VOL_UP     &kp C_PLAY_PAUSE  &kp LESS_THAN &kp GREATER_THAN
                 &sk LCTRL      &kp LA(LC(LG(UP_ARROW)))       &sk LGUI       &sk LSHFT       &kp LG(C)   &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
                                &kp LA(RC(RG(LEFT)))       &kp LA(LC(LG(DOWN)))      &kp LA(LC(LG(RIGHT)))                                      &kp HOME       &kp LEFT      &kp DOWN
                                                              &kp LG(V)          &trans         &kp MINUS         &kp PLUS
