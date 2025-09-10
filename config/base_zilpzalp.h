@@ -45,23 +45,6 @@
         };
     };
 };
-
- / {
-    macros {
-        ipad_tile_right: ipad_tile_right {
-            label = "iPad Tile right";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &macro_press   &kp LCTRL
-                &macro_press   &kp LGUI      // koristi LGUI umesto GLOBE
-                &macro_tap     &kp RIGHT
-                &macro_release &kp LGUI
-                &macro_release &kp LCTRL
-            >;
-        };
-    };
-};
 / {
     macros {
         ipad_tile_right: ipad_tile_right {
