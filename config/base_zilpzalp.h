@@ -47,7 +47,7 @@
 };
 / {
   macros {
-    ipad_tile_rihgt: ipad_tile_right {
+    ipad_tile_right: ipad_tile_right {
       label = "iPad Tile Right";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
