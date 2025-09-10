@@ -37,9 +37,9 @@
       #binding-cells = <0>;
       bindings = <
         &macro_press   &kp LCTRL
-        &macro_press   &kp LGUI      // koristi LGUI; iPad ga vidi kao Globe
+        &macro_press   &kp GLOBE      // koristi LGUI; iPad ga vidi kao Globe
         &macro_tap     &kp LEFT
-        &macro_release &kp LGUI
+        &macro_release &kp GLOBE
         &macro_release &kp LCTRL
       >;
     };
