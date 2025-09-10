@@ -37,9 +37,9 @@
             #binding-cells = <0>;
             bindings = <
                 &macro_press   &kp LCTRL     // pritisni Ctrl
-                &macro_press   &kp LGUI      // pritisni Globe (GUI = Globe na iPad-u)
+                &macro_press   &kp GLOBE      // pritisni Globe (GUI = Globe na iPad-u)
                 &macro_tap     &kp LEFT      // tapni Left
-                &macro_release &kp LGUI      // otpusti Globe
+                &macro_release &kp GLOBE      // otpusti Globe
                 &macro_release &kp LCTRL     // otpusti Ctrl
             >;
         };
