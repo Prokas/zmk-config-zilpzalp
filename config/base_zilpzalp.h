@@ -61,6 +61,8 @@
         };
     };
 };
+/ {
+
 #define COMBO(NAME, BINDINGS, KEYPOS) \
 combo_##NAME { \
     timeout-ms = <20>; \
