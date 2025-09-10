@@ -43,22 +43,6 @@
             >;
         };
     };
-};  macros {
-        ipad_tile_left: ipad_tile_right {
-            label = "iPad Tile Right";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &macro_press   &kp LCTRL
-                &macro_press   &kp GLOBE
-                &macro_tap     &kp RIGHT
-                &macro_release &kp GLOBE
-                &macro_release &kp LCTRL
-            >;
-        };
-    };
-};
-
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
 combo_##NAME { \
