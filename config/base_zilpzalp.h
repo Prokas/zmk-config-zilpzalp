@@ -29,20 +29,21 @@
         };
     };
 };
+/ {
   macros {
-        ipad_tile_left: ipad_tile_left {
-            label = "iPad Tile Left";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &macro_press   &kp LCTRL
-                &macro_press   &kp LGUI
-                &macro_tap     &kp LEFT
-                &macro_release &kp LGUI
-                &macro_release &kp LCTRL
-            >;
-        };
+    ipad_tile_left: ipad_tile_left {
+      label = "iPad Tile Left";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <
+        &macro_press   &kp LCTRL
+        &macro_press   &kp LGUI      // koristi LGUI; iPad ga vidi kao Globe
+        &macro_tap     &kp LEFT
+        &macro_release &kp LGUI
+        &macro_release &kp LCTRL
+      >;
     };
+  };
 };
 
 
