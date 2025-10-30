@@ -23,7 +23,7 @@
             label = "APT";
 
             bindings = <
-                               &kp W          &kp E          &kp R         &kp T         &kp Z         &kp U          &kp I         &my_lt CONT o
+                               &kp W          &kp E          &kp R         &kp T         &kp Z         &kp U          &kp I         &my_lt CONT O
                 &hl LCTRL A    &hl LALT S     &hl LGUI D    &hl LSHFT F    &hl RALT G     &hr RALT N     &hr RSHFT J    &hr RGUI K     &hr LALT L     &hr RCTRL P
                                &kp C          &kp V          &kp B                                       &kp M          &comsem        &dotcol
                                                              &my_lt NUM X &my_lt NAV SPACE &my_lt SYM BACKSPACE &my_lt FUN H
@@ -82,8 +82,8 @@
                                &kp F9         &kp F8         &kp F7                                       &kp F1         &kp F2         &kp F3
                                                              &trans         &trans         &trans         &trans
             >;
-};
-        symbols {
+              };
+        Settings {
             label = "CONT";
 
             bindings = <
