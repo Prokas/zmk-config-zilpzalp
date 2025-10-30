@@ -68,8 +68,8 @@
             bindings = <
                                &kp SQT    &kp SEMICOLON        &kp LEFT_BRACKET &kp RIGHT_BRACKET     &kp RIGHT_BRACKET         &kp F7         &kp F8         &kp F9
                 &kp LC(LG(Q))    &trans         &trans         &trans         &kp BACKSLASH     &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
-                               &bt BT_CLR_ALL         &bt BT_SEL 1        &bt BT_SEL 2                                      &kp F1         &kp F2         &kp F3
-                                                             &out OUT_TOG   &trans         &trans         &trans
+                               &none         &none         &none                                       &kp F1         &kp F2         &kp F3
+                                                             &none    &trans         &trans         &trans
             >;
 #endif
 #ifndef ZILPZALP_BLE_FLAG
@@ -88,7 +88,7 @@
 
             bindings = <
                                &kp LBRC          &kp RBRC          &kp LPAR           &kp RPAR          &none          &none          &none          &none
-                &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &none          &none          &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
+                &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &none          &none          &bt BT_CLR_ALL   &bt BT_SEL 1     &bt BT_SEL 2     &out OUT_TOG
                                &kp GRAVE      &kp DQT        &kp UNDERSCORE                                 &kp BACKSLASH  &kp PIPE       &kp EQUAL
                                                              &kp TILDE        &trans         &trans         &trans
             >;
