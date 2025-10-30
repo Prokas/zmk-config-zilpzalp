@@ -6,6 +6,7 @@
 #define NAV 2
 #define SYM 3
 #define FUN 4
+#define CONT 5
 
 // &lt {
 //     quick_tap_ms = <170>;
