@@ -5,7 +5,8 @@
 
 #include "base_zilpzalp.h"
 
-
+// Keymap prenet sa gugutka (googootkah.keymap), isti raspored tastera.
+//
 // zilpzalp key numbers
 //     __________________________  __________________________
 //    /     0  |  1  |  2  |  3  \/   4 |   5 |   6 |   7    \
@@ -15,84 +16,74 @@
 //           --------------              --------------
 
 / {
-
     keymap {
         compatible = "zmk,keymap";
 
-        aptmak {
-            label = "APT";
-
+        default {
+            display-name = "DEF";
             bindings = <
-                               &kp W          &kp E          &kp R         &kp T         &kp Z         &kp U          &kp I         &kp O
-                &hl LCTRL A    &hl LALT S     &hl LGUI D    &hl LSHFT F    &hl RALT G     &hr RALT N     &hr RSHFT J    &hr RGUI K     &hr LALT L     &hr RCTRL P
-                               &kp C          &kp V          &kp B                                       &kp M          &comsem        &dotcol
-                                                             &my_lt NUM X &my_lt NAV SPACE &my_lt SYM BACKSPACE &my_lt FUN H
+                                  &kp W             &kp E             &kp R             &kp T             &kp Z             &kp U             &kp I             &kp O
+                &hl LCTRL A       &hl LALT S        &hl LGUI D        &hl LSHFT F       &hl RALT G        &hr RALT N        &hr RSHFT J       &hr RGUI K        &hr LALT L        &hr RCTRL P
+                                  &kp C             &kp V             &kp B                                                                          &kp M             &comsem           &dotcol
+                                                                      &my_lt NUM X      &my_lt NAV SPACE  &my_lt SYM BSPC   &my_lt LAT H
             >;
         };
+
         numbers {
-            label = "NUM";
-
+            display-name = "NUM";
             bindings = <
-                                  &kp TAB            &none                &none              &none          &none          &kp N7         &kp N8         &kp N9
-                &hl LCTRL KP_PLUS &hl LALT KP_MINUS &hl LGUI KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT       &none          &kp N4         &kp N5         &kp N6         &none
-                                  &kp N9            &kp N8               &kp N7                                           &kp N1         &kp N2         &kp N3
-                                                             &trans         &trans         &kp E          &kp N0
+                                      &kp TAB               &kp LG(M)             &none                 &kp LC(UP)            &none                 &kp N7                &kp N8                &kp N9
+                &hl LCTRL KP_PLUS     &hl LALT KP_MINUS     &hl LGUI KP_ASTERISK  &hl LSHFT KP_SLASH    &kp RALT              &none                 &kp N4                &kp N5                &kp N6                &none
+                                      &none                 &none                 &none                                                                                          &kp N1                &kp N2                &kp N3
+                                                                                  &trans                &trans                &none                 &kp N0
             >;
         };
+
         navigation {
-            label = "NAV";
-
+            display-name = "NAV";
             bindings = <
-                               &ipad_tile_fullscreen         &ipad_tile_left          &ipad_tile_right         &kp C_VOL_DN   &kp C_VOL_UP     &kp C_PLAY_PAUSE  &kp LESS_THAN &kp GREATER_THAN
-                &kp LA(LC(LG(M)))      &kp LA(LC(LG(UP_ARROW)))       &sk LGUI       &sk LSHFT       &kp LG(C)   &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
-                               &kp LA(RC(RG(LEFT)))       &kp LA(LC(LG(DOWN)))      &kp LA(LC(LG(RIGHT)))                                      &kp HOME       &kp LEFT      &kp DOWN
-                                                             &kp LG(V)          &trans         &kp MINUS         &kp PLUS
+                                          &none                     &none                     &kp DEL                   &kp C_VOL_DN              &kp C_VOL_UP              &kp C_PLAY_PAUSE          &kp LESS_THAN             &kp GREATER_THAN
+                &kp LG(LC(LA(M)))         &kp LA(LC(LG(UP_ARROW)))  &sk LGUI                  &sk LSHFT                 &kp LG(C)                 &kp C_MUTE                &none                     &none                     &kp UP                    &kp RIGHT
+                                          &kp LC(LA(LG(LEFT)))      &kp LA(LC(LG(RIGHT)))     &none                                                                                                          &none                     &kp LEFT_ARROW            &kp DOWN
+                                                                                              &kp LG(V)                 &kp LA(LC(LG(RIGHT)))     &kp PLUS                  &kp MINUS
             >;
         };
+
         symbols {
-            label = "SYM";
-
+            display-name = "SYM";
             bindings = <
-                               &kp LBRC          &kp RBRC          &kp LPAR           &kp RPAR          &none          &none          &none          &none
-                &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &none          &none          &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
-                               &kp GRAVE      &kp DQT        &kp UNDERSCORE                                 &kp BACKSLASH  &kp PIPE       &kp EQUAL
-                                                             &kp TILDE        &trans         &trans         &trans
+                                &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &none           &none           &none           &none
+                &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &none           &none           &kp AMPERSAND   &kp ASTERISK    &kp PERCENT     &kp CARET
+                                &kp GRAVE       &kp DQT         &kp UNDERSCORE                                                                  &kp BACKSLASH   &kp PIPE        &kp EQUAL
+                                                                &kp TILDE       &mo BT          &trans          &trans
             >;
-
-
         };
+
+        bt_layer {
+            display-name = "BT";
+            bindings = <
 #ifdef ZILPZALP_BLE_FLAG
-        function {
-            label = "FUN";
-
-            bindings = <
-                               &kp SQT    &kp SEMICOLON        &kp LEFT_BRACKET &kp RIGHT_BRACKET     &kp RIGHT_BRACKET         &bt BT_SEL 1          &bt BT_SEL 2         &bt BT_CLR_ALL 
-                &kp LC(LG(Q))  &trans         &trans         &out OUT_TOG         &kp BACKSLASH     &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
-                               &trans          &trans          &none                                       &kp F1         &kp F2         &kp F3
-                                                             &trans     &trans         &trans         &trans
-            >;
+                                &none           &none           &none           &none           &none           &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL
+                &kp LC(LG(Q))   &trans          &trans          &none           &none           &none           &none           &none           &none           &none
+                                &trans          &trans          &none                                                                  &none           &none           &none
+                                                                &none           &none           &trans          &trans
+#else
+                               &none          &none          &none          &none          &none          &none          &none          &none
+                &kp LC(LG(Q))  &trans         &trans         &none          &none          &none          &none          &none          &none          &none
+                               &trans         &trans         &none                                                              &none          &none          &none
+                                                             &none          &none          &trans         &trans
 #endif
-#ifndef ZILPZALP_BLE_FLAG
-        function {
-            label = "FUN";
-
-            bindings = <
-                               &trans          &trans         &trans         &trans         &kp F12        &kp F7         &kp F8         &kp F9
-                &kp LC(LG(Q))  &trans          &trans          &trans        &trans         &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
-                               &trans           &trans          &trans                                     &kp F1         &kp F2         &kp F3
-                                                             &trans         &trans         &trans         &trans
             >;
-           
-         
-#endif
         };
 
+        latin {
+            display-name = "LAT";
+            bindings = <
+                                   &kp SQT            &kp SEMICOLON      &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp F10            &kp F7             &kp F8             &kp F9
+                &kp LC(LG(Q))      &none              &none              &none              &kp BACKSLASH      &kp F11            &kp F4             &kp F5             &kp F6             &trans
+                                   &none              &none              &none                                                                              &kp F1             &kp F2             &kp F3
+                                                                         &none              &none              &kp F12            &none
+            >;
+        };
     };
 };
-
-//     __________________________  __________________________
-//    /     1  |  2  |  3  |  4  \/   5 |   6 |   7 |   8    \
-// | 10  | 11  | 12  | 13  | 14  ||  15 |  16 |  17 |  18 | 19  |
-//    \    20  | 21  | 22  |     ||     |  23 |  24 |  25   /
-//                \    26  | 27  /\  28 |  29    /
-//                 --------------  --------------
